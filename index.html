@@ -12,7 +12,7 @@
   </head>
   <body>
   	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  	  <a class="navbar-brand" href="#">Nick Barreyre</a>
+  	  <!-- <a class="navbar-brand" href="#">Nick Barreyre</a> -->
   	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
   	    <span class="navbar-toggler-icon"></span>
   	  </button>
@@ -34,22 +34,50 @@
   	  </div>
   	</nav>
 
-    <!--Temporary Jumbotron-->
-    <div class="jumbotron jumbotron-fluid">
-    	<div class="container">
-    	  <div class="row">
-    	    <div class="col-md-4 align-self-center">
-    	      <img src="img/portrait.jpg" alt="Portrait of Nick" class="img-thumbnail">
-    	    </div>
-    	    <div class="col-md-8 align-self-start">
-    	      <div class="container">
-    	        <h1 class="display-4">Welcome!</h1>
-    	        <p class="lead">I'm glad you've found my personal website. It's currently under development with plenty of content coming soon!</p>
-    	      </div>
-    	    </div>
-    	  </div>
-    	</div>
-	   </div>
+  	<!--Main Content-->
+  	<main>
+	  	<div class="container">
+	  		<div class="row align-items-center">
+	  			<div class="col-sm-4">
+	  			  <div class="container p-sm-2">
+	  			    <figure class="figure">
+	  			      <img class="img-fluid" src="img/portrait.jpg" alt="Portrait of Nick">
+	  			    </figure>
+	  			  </div>
+	  			</div>
+	  			<div class="col-sm-8">
+	  			  <div class="container">
+	  			    <h1 class="display-2">Nicholas Barreyre</h1>
+	  			  </div>
+	  			</div> 
+	  		</div>
+	  		<div class="row">
+	  			<div class="col">
+	  				<!--Temporary Jumbotron-->
+	  				<div class="container align-self-center align-items-center">
+	  					<div class="alert alert-info alert-dismissible fade show" role="alert">
+	  					  <strong>I'm glad you've found my website. It's currently under development with plenty more content coming soon!</strong>
+	  					  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	  					    <span aria-hidden="true">&times;</span>
+	  					  </button>
+	  					</div>
+	  				</div>
+	  			</div>
+	  		</div>
+	  		<div class="row">
+	  			<div class="col">
+	  				<div class="container">
+	  					<p>I am currently pursuing a combined honours degree in computer science and mathematics at <a href="www.dal.ca">Dalhousie University</a> in Halifax, Canada.</p>
+	  					
+	  					<p>Recently, I have been studying under the supervision of <a href="http://www.cs.smu.ca/~sageev/">Dr. Sageev Oore</a>. In collaboration with Nicholas Meade, <a href="https://scottclowe.com">Dr. Scott Lowe</a>, and Dr. Oore, I coauthored <a href="https://arxiv.org/abs/1907.04352">Exploring Conditioning for Generative Music Systems with Human-Interpretable Controls</a> (<a href="http://computationalcreativity.net/iccc2019/">ICCC 2019</a>).</p>
+
+	  					<p>I am broadly interested in artificial intelligence and have a specific focus on deep learning. I hope to advance these fields in a meaningful way.</p>
+	  				</div>
+	  			</div>
+	  			
+	  		</div>
+	  	</div>
+  	</main>
 
     <!-- Temporary Modal for Clicks on Disabled Content-->
     <div class="modal fade" id="disabledModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -63,7 +91,7 @@
           </div>
           <div class="modal-body">
             <div class="alert alert-warning" role="alert">
-              This is unavailable because it is stil under development.
+              This is still under development.
             </div>
           </div>
         </div>
