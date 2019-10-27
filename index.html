@@ -67,11 +67,51 @@
 	  		<div class="row">
 	  			<div class="col">
 	  				<div class="container">
-	  					<p>I am currently pursuing a combined honours degree in computer science and mathematics at <a href="www.dal.ca">Dalhousie University</a> in Halifax, Canada.</p>
-	  					
-	  					<p>Recently, I have been studying under the supervision of <a href="http://www.cs.smu.ca/~sageev/">Dr. Sageev Oore</a>. In collaboration with Nicholas Meade, <a href="https://scottclowe.com">Dr. Scott Lowe</a>, and Dr. Oore, I coauthored <a href="https://arxiv.org/abs/1907.04352">Exploring Conditioning for Generative Music Systems with Human-Interpretable Controls</a> (<a href="http://computationalcreativity.net/iccc2019/">ICCC 2019</a>).</p>
+	  					<p>I am currently pursuing a combined honours degree in computer science and mathematics at <a href="www.dal.ca">Dalhousie University</a> in Halifax, Canada. Recently, I have been studying under the supervision of <a href="http://www.cs.smu.ca/~sageev/">Dr. Sageev Oore</a>.</p>
 
-	  					<p>I am broadly interested in artificial intelligence and have a specific focus on deep learning. I hope to advance these fields in a meaningful way.</p>
+	  					<p>I am broadly interested in artificial intelligence and have a specific focus on deep learning. My goal is to advance AI in a meaningful and ethical way.</p>
+
+	  					<div class="card">
+	  					  <div class="card-header">
+	  					    Featured Work
+	  					  </div>
+	  					  <div class="card-body">
+	  					    <h5 class="card-title">Exploring Control Signals</h5>
+	  					    <p class="card-text">In collaboration with Nicholas Meade, <a href="https://scottclowe.com">Dr. Scott C. Lowe</a>, and Dr. Oore, I coauthored <a href="https://arxiv.org/abs/1907.04352">Exploring Conditioning for Generative Music Systems with Human-Interpretable Controls</a> (<a href="http://computationalcreativity.net/iccc2019/">ICCC 2019</a>). This work introduced various <em>control signals</em> to the preexisting <a href="https://magenta.tensorflow.org/performance-rnn">Performance RNN</a> model. When generating piano performances from a trained model, control signals are a means of influencing the sample that is generated. For example, we introduced a control signal that can be used to mimic the style of a given composer. Using this control signal it is possible to conditionally generate a piano performance on Ravel or Schumann to name just two composers.</p>
+
+	  					    <div class="container">
+	  					    	<div class="row">
+	  					    		<div class="col">
+	  					    			<div class="media">
+	  					    			  <img class="align-self-start mr-3" src="img/ravel.jpg" alt="Generic placeholder image">
+	  					    			  <div class="media-body">
+	  					    			    <h5 class="mt-0">Ravel Conditioned Sample</h5>
+	  					    			    <p>Here is a sample conditioned on Ravel, the french impressionist composer. Notice the trills and tremolos.</p>
+
+	  					    			    <audio id="ravelSample" src="audio/ravel.mp3" preload="auto"></audio>
+	  					    			    <button class="btn btn-primary" onclick="document.getElementById('ravelSample').play();"><span class="oi oi-play-circle"></span>Play</button>
+	  					    			  </div>
+	  					    			</div>
+	  					    		</div>
+	  					    		<div class="col">
+	  					    			<div class="media">
+	  					    			  <img class="align-self-start mr-3" src="img/schumann.jpg" alt="Generic placeholder image">
+	  					    			  <div class="media-body">
+	  					    			    <h5 class="mt-0">Schumann Conditioned Sample</h5>
+	  					    			    <p>This sample was conditioned on Schumann, who is known to have a lot more block chord harmony in his textures.</p>
+
+	  					    			    <audio id="schumannSample" src="audio/schumann.mp3" preload="auto"></audio>
+	  					    			    <button class="btn btn-primary" onclick="document.getElementById('schumannSample').play();">Play</button>
+	  					    			  </div>
+	  					    			</div>
+	  					    		</div>
+	  					    		
+	  					    	</div>
+	  					    </div>
+	  					  </div>
+	  					</div>
+
+	  					
 	  				</div>
 	  			</div>
 	  			
