@@ -35,7 +35,18 @@
   	</nav>
 
   	<!--Main Content-->
-  	<main>
+  	<main class="container">
+		<!--Temporary Jumbotron-->
+		<div class="container align-self-center align-items-center pt-sm-2">
+			<div class="alert alert-info alert-dismissible fade show" role="alert">
+			  <strong>I'm glad you've found my website. It's currently under development with plenty more content coming soon!</strong>
+			  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			    <span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+		</div>
+
+  		</div>
 	  	<div class="container">
 	  		<div class="row align-items-center">
 	  			<div class="col-sm-4">
@@ -47,34 +58,63 @@
 	  			</div>
 	  			<div class="col-sm-8">
 	  			  <div class="container">
-	  			    <h1 class="display-2">Nicholas Barreyre</h1>
+	  			    <h1 class="display-4">Nicholas Barreyre</h1>
 	  			  </div>
 	  			</div> 
 	  		</div>
 	  		<div class="row">
 	  			<div class="col">
-	  				<!--Temporary Jumbotron-->
-	  				<div class="container align-self-center align-items-center">
-	  					<div class="alert alert-info alert-dismissible fade show" role="alert">
-	  					  <strong>I'm glad you've found my website. It's currently under development with plenty more content coming soon!</strong>
-	  					  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-	  					    <span aria-hidden="true">&times;</span>
-	  					  </button>
-	  					</div>
-	  				</div>
-	  			</div>
-	  		</div>
-	  		<div class="row">
-	  			<div class="col">
 	  				<div class="container">
-	  					<p>I am currently pursuing a combined honours degree in computer science and mathematics at <a href="www.dal.ca">Dalhousie University</a> in Halifax, Canada.</p>
-	  					
-	  					<p>Recently, I have been studying under the supervision of <a href="http://www.cs.smu.ca/~sageev/">Dr. Sageev Oore</a>. In collaboration with Nicholas Meade, <a href="https://scottclowe.com">Dr. Scott Lowe</a>, and Dr. Oore, I coauthored <a href="https://arxiv.org/abs/1907.04352">Exploring Conditioning for Generative Music Systems with Human-Interpretable Controls</a> (<a href="http://computationalcreativity.net/iccc2019/">ICCC 2019</a>).</p>
+	  					<p>I am pursuing a combined honours degree in computer science and mathematics at <a href="www.dal.ca">Dalhousie University</a> in Halifax, Canada under the supervision of <a href="http://www.cs.smu.ca/~sageev/">Dr. Sageev Oore</a>.</p>
 
-	  					<p>I am broadly interested in artificial intelligence and have a specific focus on deep learning. I hope to advance these fields in a meaningful way.</p>
+	  					<p>I am broadly interested in artificial intelligence and have a specific focus on deep learning. My goal is to advance AI in a meaningful and ethical way.</p>
+
+	  					<div class="card">
+	  					  <div class="card-header">
+	  					    Featured Work
+	  					  </div>
+	  					  <div class="card-body">
+	  					    <h5 class="card-title">Exploring Control Signals</h5>
+	  					    <p class="card-text">This work introduced various <em>control signals</em> to the preexisting <a href="https://magenta.tensorflow.org/performance-rnn">Performance RNN</a> model. When generating piano performances from a trained model, control signals are a means of influencing the sample that is generated. For example, we introduced a control signal that can be used to mimic the style of a given composer. Using this control signal it is possible to conditionally generate a piano performance on Ravel or Schumann to name just two composers. In collaboration with Nicholas Meade, <a href="https://scottclowe.com">Dr. Scott C. Lowe</a>, and Dr. Oore, I coauthored <a href="https://arxiv.org/abs/1907.04352">Exploring Conditioning for Generative Music Systems with Human-Interpretable Controls</a> (<a href="http://computationalcreativity.net/iccc2019/">ICCC 2019</a>). </p>
+
+  					    	<div class="row">
+
+  					    		<div class="col">
+  					    			<div class="media">
+  					    			  <img class="align-self-center mr-3" src="img/ravel.jpg" alt="Ravel Portrait">
+  					    			  <div class="media-body align-self-center">
+  					    			    <h5 class="mt-0">Ravel Conditioned Sample</h5>
+  					    			  </div>
+  					    			</div>
+
+  					    			<p>Here is a sample conditioned on Ravel, the french impressionist composer. Notice the trills and tremolos.</p>
+
+  					    			<div class="embed-responsive-300by54 align-self-end">
+  					    				<audio style="width: 100%;" class="embed-responsive-item" id="ravelAudio" src="audio/ravel.mp3" preload="auto" controls></audio>
+  					    			</div>
+  					    			
+  					    		</div>
+
+  					    		<div class="col">
+  					    			<div class="media">
+  					    			  <img class="align-self-center mr-3" src="img/schumann.jpg" alt="Schumann Portrait">
+  					    			  <div class="media-body align-self-center">
+  					    			    <h5 class="mt-0">Schumann Conditioned Sample</h5>
+  					    			  </div>
+  					    			</div>
+
+  					    			<p>This sample was conditioned on Schumann, who is known to have more block chord harmony in his textures.</p>
+
+  					    			<div class="embed-responsive-300by54">
+  					    				<audio style="width: 100%;" class="embed-responsive-item" id="ravelAudio" src="audio/schumann.mp3" preload="auto" controls></audio>
+  					    			</div>
+  					    		</div>
+
+  					    	</div>
+	  					  </div>
+	  					</div>	  					
 	  				</div>
 	  			</div>
-	  			
 	  		</div>
 	  	</div>
   	</main>
@@ -99,6 +139,7 @@
     </div>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="audioScript.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
