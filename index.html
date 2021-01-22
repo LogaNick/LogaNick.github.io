@@ -24,10 +24,9 @@
   	      <li class="nav-item active">
   	        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
   	      </li>
-  	      <li class="nav-item">
-  	        <a class="nav-link disabled" title="This is currently under development." href="#"
-			   onclick="$('#disabledModel').modal()">About</a>
-  	      </li>
+			<li class="nav-item">
+				<a class="nav-link" title="Check out some of my code!" href="portfolio.html">Portfolio</a>
+			</li>
   	      <li class="nav-item">
   	        <a class="nav-link disabled" title="This is currently under development." href="#"
 			   onclick="$('#disabledModel').modal()">Academics</a>
@@ -117,174 +116,15 @@
 											<p>Schumann was known to have block chord harmony in his textures.</p>
 
 											<div class="embed-responsive-300by54">
-												<audio style="width: 100%;" class="embed-responsive-item" id="ravelAudio"
+												<audio style="width: 100%;" class="embed-responsive-item" id="schumannAudio"
 													   src="audio/schumann.mp3" preload="auto" controls></audio>
 											</div>
 										</div>
+
 									</div>
 								</div>
 							</div>
 						</div>
-
-						<!-- Code Snippet -->
-						<div class="container">
-							<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">Fast Fibonacci</h5>
-										<div class="container">
-											<pre>
-												<code class="language-python">
-"""Find the nth number in the extended Fibonacci sequence for very large |n|. A closed form solution
- for the nth Fibonacci number exists using the Golden Ratio, but the Golden Ratio solution presents
-  overflow issues for large |n|. So to find a balance between time/space/precision, I use a linear
-recurrence solution in O(log n) time and O(1) space. It is also effective for "arbitrarily" large
-integers (whatever will fit in the available memory).
-
-Also, none of the imported functions use loops under the hood in a meaningful way. I.e. I didn't
-simply import functions to avoid writing a loop in my own code to meet the specs.
-
-Author: LogaNick
-Date: Jan 21, 2021
-"""
-
-
-from numpy import array, dot, sum
-from numpy.linalg import matrix_power
-
-
-# Use Python's integer object to allow "arbitrarily" large integers
-TRANSFORMATION_MATRIX = array([
-    [0, 1],
-    [1, 1]
-], dtype=object)
-
-FIRST_TERMS = array([0, 1], dtype=object)
-
-
-def fibonacci(term):
-    """Get the 0-indexed term in the extended Fibonacci sequence.
-
-    The 0th term is 0, the 1st term is 1, etc.
-    The -1th term is 1, the -2th term is -1 etc.
-
-    Args:
-        term (int): The desired term in the extended Fibonacci sequence
-
-    Raises:
-        TypeError: The extended Fibonacci sequence is only defined for integer indices.
-
-    Returns:
-        The desired term in the extended Fibonacci sequence.
-    """
-    if not isinstance(term, int):
-        raise TypeError("The extended Fibonacci sequence is only defined for integer indices.")
-    if term < 0:
-        result = ((-1) ** (term % 2 + 1)) * fibonacci(-1 * term)
-    elif term < 2:
-        result = term
-    else:
-        # matrix_power uses exponentiation by squaring O(log n)
-        transformation_matrix = matrix_power(TRANSFORMATION_MATRIX, term - 2)
-        result = sum(dot(transformation_matrix, FIRST_TERMS))
-
-    return result
-
-
-# Driver code
-if __name__ == "__main__":
-    n = int(input("Enter an index in the extended Fibonacci sequence: "))
-    print(fibonacci(n))
-
-												</code>
-											</pre>
-										</div>
-									</div>
-								</div>
-							</div>
-
-						<!-- Code Snippet -->
-						<div class="container">
-							<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">Merge, Sort, and Exclude</h5>
-									<div class="container">
-											<pre>
-												<code class="language-python">
-"""Function that merges two lists of strings, removes elements from a third list, and sorts and
-returns the unique elements as the result. The resulting list is sorted by non-increasing string
-length and reverse lexicographical order.
-
-This implementation has a large memory footprint. It is simple and readable, but inefficient for
-very large input.
-
-Author: LogaNick
-Date: Jan 21, 2021
-"""
-
-
-from collections.abc import Iterable
-
-
-def is_iter_of_str(obj):
-    """Check if obj is an iterable of strings.
-
-    Arguments:
-        obj object: the object to inspect
-
-    Returns:
-        True if obj is an iterable of strings and False otherwise
-    """
-    return isinstance(obj, Iterable) and all(isinstance(item, str) for item in obj)
-
-
-def merge_and_sort(originals, additionals, exclusions):
-    """Merge the first two Iterables, remove items from the third Iterable, sort and return the
-    result as a list.
-
-    The result only contains unique elements and is sorted by non-increasing string length and
-    reverse lexicographical order. The sorting is trivially stable since the result contains
-    unique strings (and therefore keys). If duplicate objects are provided in the input, the first
-    instance is used.
-
-    Arguments:
-        originals (Iterable[str]): the original list of strings
-        additionals (Iterable[str]): the list of strings to merge with original items
-        exclusions (Iterable[str]): the list of strings to exclude from the result
-
-    Returns:
-        a list of the merged and sorted strings
-    """
-    if not all(is_iter_of_str(arg) for arg in [originals, additionals, exclusions]):
-        raise TypeError("Arguments must be Iterables of strings.")
-
-    # Cast as sets
-    originals = set(originals)
-    additionals = set(additionals)
-    exclusions = set(exclusions)
-
-    # Remove the items that we want to exclude
-    originals.difference_update(exclusions)
-    additionals.difference_update(exclusions)
-
-    # Merge and sort by non-increasing length and reverse lexicographical
-    return sorted(originals.union(additionals), key=lambda item: (len(item), item), reverse=True)
-
-
-# Driver code
-if __name__ == "__main__":
-    print("Enter the three lists on separate lines and tokenized with spaces.")
-    original_list = input().split()
-    additional_list = input().split()
-    exclusion_list = input().split()
-    print(merge_and_sort(original_list, additional_list, exclusion_list))
-
-												</code>
-											</pre>
-									</div>
-								</div>
-							</div>
-						</div>
-
 					</div>
 	  				</div>
 	  			</div>
